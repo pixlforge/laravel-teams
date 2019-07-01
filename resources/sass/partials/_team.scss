@@ -1,0 +1,17 @@
+.team {
+  &__list {
+    @apply my-4;
+  }
+
+  &__list-item {
+    @apply flex justify-between items-center;
+  }
+
+  &__link {
+    @apply text-pink-400;
+
+    &:hover {
+      @apply text-pink-500;
+    }
+  }
+}

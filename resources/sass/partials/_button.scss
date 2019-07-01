@@ -1,0 +1,21 @@
+button {
+  outline: none !important;
+}
+
+.button {
+  &__primary {
+    @apply text-xs font-black uppercase rounded-full shadow-md outline-none px-4 py-2;
+
+    &:focus {
+      @apply shadow-outline;
+    }
+  }
+
+  &--pink {
+    @apply text-white bg-pink-500;
+
+    &:hover {
+      @apply bg-pink-600;
+    }
+  }
+}

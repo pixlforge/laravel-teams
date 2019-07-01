@@ -1,0 +1,41 @@
+.side-nav {
+  &__container {
+    @apply w-1/4 pr-8;
+  }
+
+  &__list {
+    @apply rounded-lg border-2 border-gray-200 p-4;
+    
+    &:not(:last-child) {
+      @apply mb-8;
+    }
+  }
+
+  &__list-item {
+    @apply my-3;
+
+    &:first-child {
+      @apply mt-0;
+    }
+
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+
+  &__link {
+    @apply text-pink-400;
+
+    &:hover {
+      @apply text-pink-700 underline;
+    }
+    
+    &--grey {
+      @apply text-gray-500;
+
+      &:hover {
+        @apply text-gray-700 underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.badge {
+  &__primary {
+    @apply text-xs font-bold text-white uppercase bg-pink-500 rounded-full px-3 py-1;
+  }
+}

@@ -2,4 +2,16 @@
 
 @tailwind components;
 
+@import "partials/badge";
+@import "partials/button";
+@import "partials/container";
+@import "partials/content";
+@import "partials/form";
+@import "partials/heading";
+@import "partials/navbar";
+@import "partials/menu";
+@import "partials/section";
+@import "partials/side-nav";
+@import "partials/team";
+
 @tailwind utilities;

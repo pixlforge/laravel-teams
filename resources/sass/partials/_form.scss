@@ -1,0 +1,17 @@
+.form {
+  &__group {
+    @apply my-10;
+  }
+
+  &__label {
+    @apply inline-block text-sm text-gray-500 font-extrabold uppercase mb-3;
+  }
+
+  &__input {
+    @apply w-full text-2xl leading-relaxed rounded-lg border-2 border-pink-200 outline-none px-4 py-1;
+
+    &:focus {
+      @apply shadow-outline;
+    }
+  }
+}

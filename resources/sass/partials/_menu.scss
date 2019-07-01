@@ -1,0 +1,23 @@
+.menu {
+  &__container {
+    @apply flex;
+  }
+
+  &__list-item {
+    @apply mx-4;
+
+    &:first-child {
+      @apply ml-0;
+    }
+
+    &:last-child {
+      @apply mr-0;
+    }
+  }
+
+  &__link {
+    &:hover {
+      @apply text-pink-400;
+    }
+  }
+}

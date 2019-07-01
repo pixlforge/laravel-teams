@@ -1,0 +1,5 @@
+.navbar {
+  &__container {
+    @apply flex justify-between mx-auto py-4;
+  }
+}

@@ -1,0 +1,9 @@
+.content {
+  &__container {
+    @apply w-3/4 pl-8;
+  }
+
+  &__header {
+    @apply border-b-2 border-gray-200 pb-8 mb-16;
+  }
+}
