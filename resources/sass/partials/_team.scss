@@ -4,7 +4,11 @@
   }
 
   &__list-item {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-center my-6;
+
+    &:first-child {
+      @apply mt-0;
+    }
   }
 
   &__link {

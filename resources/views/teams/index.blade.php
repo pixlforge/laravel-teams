@@ -11,16 +11,22 @@
     </h2>
 
     <ul class="team__list">
-      <li class="team__list-item">
-        <a
-          href=""
-          class="team__link">
-          Team one
-        </a>
-        <span class="badge__primary">
-          Admin
-        </span>
-      </li>
+      @forelse ($teams as $team)
+        <li class="team__list-item">
+          <a
+            href="{{ route('teams.show', $team) }}"
+            class="team__link">
+            {{ $team->name }}
+          </a>
+          {{-- <span class="badge__primary">
+            Admin
+          </span> --}}
+        </li>
+      @empty
+        <li class="team__list-item">
+          You're not part of any team yet.
+        </li>
+      @endforelse
     </ul>
   </section>
 
@@ -31,7 +37,7 @@
 
     <form
       method="POST"
-      action="">
+      action="{{ route('teams.store') }}">
       @csrf         
 
       <div class="form__group">
@@ -44,7 +50,13 @@
           id="name"
           name="name"
           type="text"
-          class="form__input">
+          class="form__input {{ $errors->has('name') ? 'form__input--invalid' : '' }}"
+          value="{{ old('name') ?? old('name') }}">
+        @if ($errors->has('name'))
+          <span class="form__validation">
+            {{ $errors->first('name') }}
+          </span>
+        @endif
       </div>
 
       <div class="form__group">

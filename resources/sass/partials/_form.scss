@@ -1,10 +1,18 @@
 .form {
   &__group {
     @apply my-10;
+
+    &--flex {
+      @apply flex items-center;
+    }
   }
 
   &__label {
     @apply inline-block text-sm text-gray-500 font-extrabold uppercase mb-3;
+
+    &--checkbox {
+      @apply select-none ml-2 mb-0;
+    }
   }
 
   &__input {
@@ -12,6 +20,26 @@
 
     &:focus {
       @apply shadow-outline;
+    }
+
+    &--invalid {
+      @apply border-red-500;
+    }
+  }
+
+  &__checkbox {
+    @apply;
+  }
+
+  &__validation {
+    @apply inline-block text-xs text-red-500 mt-1;
+  }
+
+  &__link {
+    @apply text-sm font-semibold text-gray-500 ml-4;
+
+    &:hover {
+      @apply underline;
     }
   }
 }

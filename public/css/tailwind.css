@@ -694,6 +694,13 @@ button {
   margin-bottom: 2.5rem;
 }
 
+.form__group--flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 .form__label {
   display: inline-block;
   font-size: 0.875rem;
@@ -701,6 +708,15 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
+}
+
+.form__label--checkbox {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
 }
 
 .form__input {
@@ -719,6 +735,31 @@ button {
 
 .form__input:focus {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.form__input--invalid {
+  border-color: #f56565;
+}
+
+.form__checkbox {
+}
+
+.form__validation {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #f56565;
+  margin-top: 0.25rem;
+}
+
+.form__link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #a0aec0;
+  margin-left: 1rem;
+}
+
+.form__link:hover {
+  text-decoration: underline;
 }
 
 .heading__h1 {
@@ -848,6 +889,12 @@ button {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team__list-item:first-child {
+  margin-top: 0;
 }
 
 .team__link {
