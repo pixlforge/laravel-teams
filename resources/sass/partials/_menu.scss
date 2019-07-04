@@ -16,6 +16,8 @@
   }
 
   &__link {
+    @apply cursor-pointer;
+    
     &:hover {
       @apply text-pink-400;
     }

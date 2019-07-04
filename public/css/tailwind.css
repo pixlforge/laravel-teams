@@ -809,6 +809,10 @@ button {
   margin-right: 0;
 }
 
+.menu__link {
+  cursor: pointer;
+}
+
 .menu__link:hover {
   color: #f687b3;
 }

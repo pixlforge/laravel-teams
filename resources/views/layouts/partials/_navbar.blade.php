@@ -20,9 +20,7 @@
 
       {{-- Username --}}
       <li class="menu__list-item">
-        <a
-          href="{{ route('logout') }}"
-          class="menu__link">
+        <a class="menu__link">
           {{ Auth::user()->name }}
         </a>
       </li>
@@ -30,7 +28,6 @@
       {{-- Logout --}}
       <li class="menu__list-item">
         <a
-          href="{{ route('logout') }}"
           class="menu__link"
           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
           {{ __('Logout') }}
