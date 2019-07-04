@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Teams;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Teams\Roles;
 
 class TeamController extends Controller
 {
@@ -43,7 +44,9 @@ class TeamController extends Controller
 
         $user = $request->user();
 
-        $user->teams()->create($request->only('name'));
+        $team = $user->teams()->create($request->only('name'));
+
+        $user->attachRole(Roles::$roleWhenCreatingTeam, $team->id);
 
         return redirect(route('teams.index'));
     }

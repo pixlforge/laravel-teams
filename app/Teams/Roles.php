@@ -2,8 +2,10 @@
 
 namespace App\Teams;
 
-class Role
+class Roles
 {
+    public static $roleWhenCreatingTeam = 'team_admin';
+
     public static $roles = [
         'team_admin' => [
             'name' => 'Admin',

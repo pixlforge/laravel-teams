@@ -2,7 +2,7 @@
 
 use App\Models\Role;
 use App\Models\Permission;
-use App\Teams\Role as TeamRole;
+use App\Teams\Roles as TeamRoles;
 use Illuminate\Database\Seeder;
 
 class RolesAndPermissionsSeeder extends Seeder
@@ -14,7 +14,7 @@ class RolesAndPermissionsSeeder extends Seeder
      */
     public function run()
     {
-        $roles = TeamRole::$roles;
+        $roles = TeamRoles::$roles;
 
         foreach ($roles as $role => $data) {
             $role = Role::firstOrCreate(['name' => $role]);

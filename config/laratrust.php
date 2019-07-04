@@ -76,7 +76,7 @@ return [
     | Please check the docs to see what you need to do in case you have the package already configured.
     |
     */
-    'use_teams' => false,
+    'use_teams' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +104,7 @@ return [
     |
     */
     'user_models' => [
-        'users' => 'App\User',
+        'users' => 'App\Models\User',
     ],
 
     /*
@@ -121,7 +121,7 @@ return [
         /**
          * Role model
          */
-        'role' => 'App\Role',
+        'role' => 'App\Models\Role',
 
         /**
          * Permission model
@@ -131,7 +131,7 @@ return [
         /**
          * Team model
          */
-        'team' => 'App\Team',
+        'team' => 'App\Models\Team',
 
     ],
 

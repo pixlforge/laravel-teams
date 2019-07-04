@@ -4,12 +4,13 @@ namespace App\Models;
 
 use App\Models\Team;
 use Illuminate\Notifications\Notifiable;
+use Laratrust\Traits\LaratrustUserTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, LaratrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
