@@ -18,9 +18,12 @@
             class="team__link">
             {{ $team->name }}
           </a>
-          {{-- <span class="badge__primary">
-            Admin
-          </span> --}}
+
+          @if ($team->ownedByCurrentUser())
+            <span class="badge__primary">
+              Admin
+            </span>
+          @endif
         </li>
       @empty
         <li class="team__list-item">
