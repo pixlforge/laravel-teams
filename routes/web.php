@@ -13,4 +13,5 @@ Route::get('/home', 'HomeController@index')->name('home');
  */
 Route::namespace('Teams')->group(function () {
     Route::resource('/teams', 'TeamController');
+    Route::resource('/teams/{team}/users', 'TeamUserController');
 });

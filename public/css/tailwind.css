@@ -627,17 +627,24 @@ video {
   }
 }
 
-.badge__primary {
+.badge__pill {
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  background-color: #ed64a6;
   border-radius: 9999px;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.badge__pill--pink {
+  background-color: #ed64a6;
+}
+
+.badge__pill--blue {
+  background-color: #4299e1;
 }
 
 button {
@@ -879,6 +886,31 @@ button {
 .side-nav__link--grey:hover {
   color: #4a5568;
   text-decoration: underline;
+}
+
+.table__wrapper {
+  border-width: 2px;
+  border-color: #edf2f7;
+  border-radius: 0.5rem;
+}
+
+.table__container {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table__head {
+  text-align: left;
+  border-bottom-width: 2px;
+  border-color: #edf2f7;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.table__header, .table__cell {
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .team__list {

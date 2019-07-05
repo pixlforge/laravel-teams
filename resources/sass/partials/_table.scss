@@ -1,0 +1,18 @@
+.table {
+  &__wrapper {
+    @apply border-2 border-gray-200 rounded-lg;
+  }
+
+  &__container {
+    @apply table-fixed w-full;
+  }
+
+  &__head {
+    @apply text-left border-b-2 border-gray-200 px-4;
+  }
+
+  &__header,
+  &__cell {
+    @apply pl-4 py-6;
+  }
+}

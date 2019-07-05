@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Teams;
 
+use App\Teams\Roles;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Teams\Roles;
 
 class TeamController extends Controller
 {
@@ -25,9 +26,9 @@ class TeamController extends Controller
      *
      * @return void
      */
-    public function show()
+    public function show(Team $team)
     {
-        return view('teams.show');
+        return view('teams.show', compact('team'));
     }
 
     /**

@@ -20,7 +20,7 @@
           </a>
 
           @if ($team->ownedByCurrentUser())
-            <span class="badge__primary">
+            <span class="badge__pill badge__pill--pink">
               Admin
             </span>
           @endif
