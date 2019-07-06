@@ -677,6 +677,15 @@ button {
   background-color: #d53f8c;
 }
 
+.button--red {
+  color: #fff;
+  background-color: #f56565;
+}
+
+.button--red:hover {
+  background-color: #e53e3e;
+}
+
 .container__main {
   margin-left: auto;
   margin-right: auto;

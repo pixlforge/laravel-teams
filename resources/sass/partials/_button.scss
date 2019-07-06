@@ -18,4 +18,12 @@ button {
       @apply bg-pink-600;
     }
   }
+
+  &--red {
+    @apply text-white bg-red-500;
+
+    &:hover {
+      @apply bg-red-600;
+    }
+  }
 }

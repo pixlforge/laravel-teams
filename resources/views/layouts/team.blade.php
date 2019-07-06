@@ -7,7 +7,7 @@
 
   <div class="content__container content__container--flex">
     <aside class="side-nav__container">
-      @include('teams.partials._nav')
+      @include('teams.partials._side-nav')
     </aside>
   
     <div class="content__main">

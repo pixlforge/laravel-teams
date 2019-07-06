@@ -51,4 +51,17 @@ class TeamController extends Controller
 
         return redirect(route('teams.index'));
     }
+
+    /**
+     * Undocumented function
+     *
+     * @param Team $team
+     * @return void
+     */
+    public function destroy(Team $team)
+    {
+        $team->delete();
+
+        return redirect(route('teams.index'));
+    }
 }
