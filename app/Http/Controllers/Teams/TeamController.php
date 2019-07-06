@@ -10,6 +10,17 @@ use App\Http\Controllers\Controller;
 class TeamController extends Controller
 {
     /**
+     * TeamController constructor.
+     *
+     * @param Request $request
+     */
+    public function __construct(Request $request)
+    {
+        return $this->middleware(['permission:delete team,' . $request->team])
+            ->only(['delete']);
+    }
+    
+    /**
      * Undocumented function
      *
      * @return void

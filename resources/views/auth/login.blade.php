@@ -66,7 +66,7 @@
           type="checkbox"
           name="remember"
           class="form__checkbox"
-          {{ old('remember') ? 'checked' : '' }}>
+          {{ old('remember') ?? 'checked' }}>
         <label
           for="remember"
           class="form__label form__label--checkbox">

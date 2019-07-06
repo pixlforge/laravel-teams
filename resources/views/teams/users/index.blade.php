@@ -20,7 +20,7 @@
         </thead>
         <tbody>
           @foreach ($team->users as $user)
-            <tr>
+            <tr class="table__row">
               <td class="table__cell">{{ $user->name }}</td>
               <td class="table__cell">
                 @if ($team->ownedBy($user))

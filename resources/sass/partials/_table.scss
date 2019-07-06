@@ -15,4 +15,8 @@
   &__cell {
     @apply text-center pl-4 py-6;
   }
+
+  &__row:nth-child(even) {
+    @apply bg-gray-100;
+  }
 }
