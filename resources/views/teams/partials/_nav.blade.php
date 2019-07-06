@@ -20,24 +20,28 @@
     </li>
 
     {{-- Subscription --}}
-    <li class="side-nav__list-item">
-      <a
-        href=""
-        class="side-nav__link">
-        Subscription
-      </a>
-    </li>
+    @permission('manage team subscription')
+      <li class="side-nav__list-item">
+        <a
+          href=""
+          class="side-nav__link">
+          Subscription
+        </a>
+      </li>
+    @endpermission
   </ul>
 
-  <ul class="side-nav__list">
-    
-    {{-- Delete the team --}}
-    <li class="side-nav__list-item">
-      <a
-        href=""
-        class="side-nav__link side-nav__link--grey">
-        Delete
-      </a>
-    </li>
-  </ul>
+  @permission('delete team')
+    <ul class="side-nav__list">
+      
+      {{-- Delete the team --}}
+      <li class="side-nav__list-item">
+        <a
+          href=""
+          class="side-nav__link side-nav__link--grey">
+          Delete
+        </a>
+      </li>
+    </ul>
+  @endpermission
 </nav>

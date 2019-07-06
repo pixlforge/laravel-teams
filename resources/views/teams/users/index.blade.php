@@ -38,7 +38,9 @@
     </div>
   </section>
 
-  <section class="section__row">
-    @include('teams.partials._add-user')
-  </section>
+  @permission('add users')
+    <section class="section__row">
+      @include('teams.partials._add-user')
+    </section>
+  @endpermission
 @endsection
