@@ -10,9 +10,17 @@ use App\Http\Controllers\Controller;
 
 class TeamUserController extends Controller
 {
+    /**
+     * TeamUserController constructor.
+     *
+     * @param Request $request
+     */
     public function __construct(Request $request)
     {
-        return $this->middleware(['permission:add users,' . $request->team])
+        $this->middleware(['in_team:' . $request->team])
+            ->except(['store']);
+
+        $this->middleware(['permission:add users,' . $request->team])
             ->only(['store']);
     }
 

@@ -15,7 +15,7 @@ class TeamDeleteConfirmationController extends Controller
      */
     public function __construct(Request $request)
     {
-        return $this->middleware(['permission:delete team,' . $request->team]);
+        $this->middleware(['permission:delete team,' . $request->team]);
     }
 
     /**

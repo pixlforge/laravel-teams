@@ -16,7 +16,10 @@ class TeamController extends Controller
      */
     public function __construct(Request $request)
     {
-        return $this->middleware(['permission:delete team,' . $request->team])
+        $this->middleware(['in_team:' . $request->team])
+            ->except(['index', 'store']);
+        
+        $this->middleware(['permission:delete team,' . $request->team])
             ->only(['delete']);
     }
     
