@@ -1,9 +1,13 @@
 <?php
+use App\Models\Plan;
 
 Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+
+    dd(Plan::teams()->get());
+    
+    // return view('welcome');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
