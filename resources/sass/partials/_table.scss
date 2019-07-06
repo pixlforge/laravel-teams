@@ -8,11 +8,11 @@
   }
 
   &__head {
-    @apply text-left border-b-2 border-gray-200 px-4;
+    @apply border-b-2 border-gray-200 px-2;
   }
 
   &__header,
   &__cell {
-    @apply pl-4 py-6;
+    @apply text-center pl-4 py-6;
   }
 }

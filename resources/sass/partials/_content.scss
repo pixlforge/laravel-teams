@@ -1,6 +1,18 @@
 .content {
   &__container {
-    @apply w-3/4 pl-8;
+    @apply mt-20;
+
+    &--flex {
+      @apply flex;
+    }
+
+    &--narrow {
+      @apply max-w-4xl mx-auto;
+    }
+  }
+
+  &__main {
+    @apply flex-1;
   }
 
   &__header {

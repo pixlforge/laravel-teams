@@ -1,6 +1,6 @@
 .side-nav {
   &__container {
-    @apply w-1/4 pr-8;
+    @apply min-w-90 pr-8;
   }
 
   &__list {

@@ -685,8 +685,23 @@ button {
 }
 
 .content__container {
-  width: 75%;
-  padding-left: 2rem;
+  margin-top: 5rem;
+}
+
+.content__container--flex {
+  display: -webkit-box;
+  display: flex;
+}
+
+.content__container--narrow {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content__main {
+  -webkit-box-flex: 1;
+          flex: 1 1 0%;
 }
 
 .content__header {
@@ -834,15 +849,12 @@ button {
   margin-bottom: 3rem;
 }
 
-.section__row {
-  width: 100%;
-  display: -webkit-box;
-  display: flex;
-  margin-top: 5rem;
+.section__row:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 .side-nav__container {
-  width: 25%;
+  min-width: 22.5rem;
   padding-right: 2rem;
 }
 
@@ -900,14 +912,14 @@ button {
 }
 
 .table__head {
-  text-align: left;
   border-bottom-width: 2px;
   border-color: #edf2f7;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .table__header, .table__cell {
+  text-align: center;
   padding-left: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -5367,6 +5379,10 @@ button {
 
 .min-w-0 {
   min-width: 0;
+}
+
+.min-w-90 {
+  min-width: 22.5rem;
 }
 
 .min-w-full {
@@ -12332,6 +12348,10 @@ button {
 
   .sm\:min-w-0 {
     min-width: 0;
+  }
+
+  .sm\:min-w-90 {
+    min-width: 22.5rem;
   }
 
   .sm\:min-w-full {
@@ -19300,6 +19320,10 @@ button {
     min-width: 0;
   }
 
+  .md\:min-w-90 {
+    min-width: 22.5rem;
+  }
+
   .md\:min-w-full {
     min-width: 100%;
   }
@@ -26266,6 +26290,10 @@ button {
     min-width: 0;
   }
 
+  .lg\:min-w-90 {
+    min-width: 22.5rem;
+  }
+
   .lg\:min-w-full {
     min-width: 100%;
   }
@@ -33230,6 +33258,10 @@ button {
 
   .xl\:min-w-0 {
     min-width: 0;
+  }
+
+  .xl\:min-w-90 {
+    min-width: 22.5rem;
   }
 
   .xl\:min-w-full {

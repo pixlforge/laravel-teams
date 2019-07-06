@@ -5,5 +5,13 @@
     {{ $team->name }}
   </h1>
 
-  @yield('teamcontent')
+  <div class="content__container content__container--flex">
+    <aside class="side-nav__container">
+      @include('teams.partials._nav')
+    </aside>
+  
+    <div class="content__main">
+      @yield('teamcontent')
+    </div>
+  </div>
 @endsection

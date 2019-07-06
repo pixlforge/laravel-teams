@@ -4,7 +4,7 @@
     {{-- Dashboard --}}
     <li class="side-nav__list-item">
       <a
-        href=""
+        href="{{ route('teams.show', $team) }}"
         class="side-nav__link">
         Dashboard
       </a>
@@ -13,7 +13,7 @@
     {{-- Users --}}
     <li class="side-nav__list-item">
       <a
-        href=""
+        href="{{ route('teams.users.index', $team) }}"
         class="side-nav__link">
         Users
       </a>

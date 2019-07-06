@@ -4,6 +4,8 @@
   }
 
   &__row {
-    @apply w-full flex mt-20;
+    &:not(:last-child) {
+      @apply mb-20;
+    }
   }
 }
