@@ -21,4 +21,17 @@ class TeamSubscriptionController extends Controller
 
         return view('teams.subscriptions.index', compact('team', 'plans'));
     }
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @param Team $team
+     * @return void
+     */
+    public function store(Request $request, Team $team)
+    {
+        dump($request->all());
+        dd($team);
+    }
 }

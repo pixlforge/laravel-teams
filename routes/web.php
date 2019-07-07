@@ -27,5 +27,6 @@ Route::namespace('Teams')->group(function () {
     Route::resource('/teams/{team}/subscriptions', 'TeamSubscriptionController')
         ->names([
             'index' => 'teams.subscriptions.index',
+            'store' => 'teams.subscriptions.store',
         ]);
 });

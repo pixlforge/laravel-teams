@@ -1,0 +1,5 @@
+.stripe {
+  &__input {
+    @apply max-w-lg rounded-lg border-2 border-gray-200 p-4 mt-6;
+  }
+}

@@ -23,7 +23,7 @@
 
       <form
         method="POST"
-        action="">
+        action="{{ route('teams.subscriptions.store', $team) }}">
         @csrf
 
         @foreach ($plans as $plan)
@@ -33,6 +33,7 @@
               name="plan"
               type="radio"
               class="form__radio"
+              value="{{ $plan->provider_id }}"
               {{ $loop->first ? 'checked' : '' }}>
             <label
               for="{{ $plan->provider_id }}"
@@ -43,19 +44,7 @@
           </div>
         @endforeach
 
-        <div class="form__group">
-          <h3 class="heading__h4">
-            Payment details
-          </h3>
-        </div>
-
-        <div class="form__group">
-          <button
-            type="submit"
-            class="button__primary button--pink">
-            Process payment
-          </button>
-        </div>
+        <Stripe/>
 
       </form>
     </section>
