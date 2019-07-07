@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Laravel\Cashier\Billable;
 use Laratrust\Models\LaratrustTeam;
+use App\Subscriptions\Traits\HasSubscriptions;
 
 class Team extends LaratrustTeam
 {
-    use Billable;
+    use Billable, HasSubscriptions;
 
     /**
      * The attributes that are mass assignable.
@@ -17,16 +18,6 @@ class Team extends LaratrustTeam
     protected $fillable = [
         'name',
     ];
-
-    /**
-     * Checks if the team has an active subscription.
-     *
-     * @return boolean
-     */
-    public function hasSubscription()
-    {
-        return false;
-    }
 
     /**
      * Checks whether or not the team is owned by the user.
@@ -51,6 +42,16 @@ class Team extends LaratrustTeam
     }
 
     /**
+     * Undocumented function
+     *
+     * @return App\Models\Plan
+     */
+    public function getPlanAttribute()
+    {
+        return $this->plans->first();
+    }
+
+    /**
      * Get all of the subscriptions for the Stripe model.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -59,6 +60,17 @@ class Team extends LaratrustTeam
     {
         return $this->hasMany(TeamSubscription::class, $this->getForeignKey())
             ->orderBy('created_at', 'desc');
+    }
+
+    /**
+     * Plans relationship through the TeamSubscription model.
+     *
+     * @return void
+     */
+    public function plans()
+    {
+        return $this->hasManyThrough(Plan::class, TeamSubscription::class, 'team_id', 'provider_id', 'id', 'stripe_plan')
+            ->orderBy('team_subscriptions.created_at', 'desc');
     }
 
     /**
