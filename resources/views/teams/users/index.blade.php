@@ -42,7 +42,21 @@
 
   @permission('add users')
     <section class="section__row">
-      @include('teams.partials._add-user')
+      @if ($team->hasReachedMemberLimit())
+        <p>
+          @if ($team->hasSubscription())
+            You've reached the limit for the number of users for plan <strong>{{ optional($team->plan)->name }}</strong>.
+          @endif
+          <a
+            href="{{ route('teams.subscriptions.index', $team) }}"
+            class="link__primary">
+            Upgrade
+          </a>
+          to add more members to <em>{{ $team->name }}</em>.
+        </p>
+      @else
+        @include('teams.partials._add-user')
+      @endif
     </section>
   @endpermission
 @endsection

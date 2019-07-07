@@ -18,8 +18,7 @@
       @include('teams.subscriptions.partials._create-subscription')
     @else
       <p>
-        You're currently on the <strong>{{ $team->plan->name }}</strong> plan.<br>
-        This plan supports up to <strong>{{ $team->plan->teams_limit }}</strong> users.
+        You're currently on the <strong>{{ $team->plan->name }}</strong> plan. This plan supports up to <strong>{{ $team->plan->teams_limit }}</strong> users.
       </p>      
     @endunless
   </section>

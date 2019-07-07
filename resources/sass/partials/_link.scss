@@ -1,0 +1,9 @@
+.link {
+  &__primary {
+    @apply text-pink-500;
+
+    &:hover {
+      @apply text-pink-700 underline;
+    }
+  }
+}

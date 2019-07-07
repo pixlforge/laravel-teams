@@ -42,6 +42,21 @@ class Team extends LaratrustTeam
     }
 
     /**
+     * Checks if the maximum number of available users
+     * has been reached for the team's current plan.
+     *
+     * @return boolean
+     */
+    public function hasReachedMemberLimit()
+    {
+        if (!$this->hasSubscription()) {
+            return true;
+        }
+
+        return $this->users->count() >= $this->plan->teams_limit;
+    }
+
+    /**
      * Undocumented function
      *
      * @return App\Models\Plan

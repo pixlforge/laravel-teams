@@ -50,6 +50,8 @@ class TeamUserController extends Controller
             'email' => 'required|exists:users,email'
         ]);
 
+        abort_if($team->hasReachedMemberLimit(), 403, "Your team is full.");
+
         $team->users()->syncWithoutDetaching(
             $user = User::where('email', $request->email)->first()
         );
