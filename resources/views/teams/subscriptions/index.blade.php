@@ -29,14 +29,14 @@
         @foreach ($plans as $plan)
           <div class="form__group form__group--radio">
             <input
-              id="{{ $plan->provider_id }}"
+              id="plan-{{ $plan->id }}"
               name="plan"
               type="radio"
               class="form__radio"
-              value="{{ $plan->provider_id }}"
+              value="{{ $plan->id }}"
               {{ $loop->first ? 'checked' : '' }}>
             <label
-              for="{{ $plan->provider_id }}"
+              for="plan-{{ $plan->id }}"
               class="form__label form__label--radio">
               {{ $plan->name }}
               <span class="form__label--info">({{ $plan->teams_limit }} users)</span>
