@@ -15,6 +15,11 @@ class Team extends LaratrustTeam
         'name',
     ];
 
+    public function hasSubscription()
+    {
+        return false;
+    }
+
     /**
      * Checks whether or not the team is owned by the user.
      *

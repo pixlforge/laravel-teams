@@ -10,4 +10,8 @@
   &__h3 {
     @apply text-xl font-bold leading-relaxed;
   }
+
+  &__h4 {
+    @apply text-lg font-bold leading-relaxed;
+  }
 }

@@ -5,6 +5,14 @@
     &--flex {
       @apply flex items-center;
     }
+
+    &--radio {
+      @apply inline-block my-0;
+
+      &:not(:last-child) {
+        @apply mr-8;
+      }
+    }
   }
 
   &__label {
@@ -12,6 +20,14 @@
 
     &--checkbox {
       @apply select-none ml-2 mb-0;
+    }
+
+    &--radio {
+      @apply text-base normal-case text-gray-700 select-none;
+    }
+
+    &--info {
+      @apply text-sm text-gray-500 font-normal;
     }
   }
 
@@ -29,6 +45,10 @@
 
   &__checkbox {
     @apply;
+  }
+
+  &__radio {
+    @apply mr-2;
   }
 
   &__validation {

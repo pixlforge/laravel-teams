@@ -23,7 +23,7 @@
     @permission('manage team subscription')
       <li class="side-nav__list-item">
         <a
-          href=""
+          href="{{ route('teams.subscriptions.index', $team) }}"
           class="side-nav__link">
           Subscription
         </a>

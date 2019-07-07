@@ -732,6 +732,16 @@ button {
           align-items: center;
 }
 
+.form__group--radio {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form__group--radio:not(:last-child) {
+  margin-right: 2rem;
+}
+
 .form__label {
   display: inline-block;
   font-size: 0.875rem;
@@ -748,6 +758,22 @@ button {
           user-select: none;
   margin-left: 0.5rem;
   margin-bottom: 0;
+}
+
+.form__label--radio {
+  font-size: 1rem;
+  text-transform: none;
+  color: #4a5568;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form__label--info {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  font-weight: 400;
 }
 
 .form__input {
@@ -773,6 +799,10 @@ button {
 }
 
 .form__checkbox {
+}
+
+.form__radio {
+  margin-right: 0.5rem;
 }
 
 .form__validation {
@@ -807,6 +837,12 @@ button {
 
 .heading__h3 {
   font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.625;
+}
+
+.heading__h4 {
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.625;
 }
