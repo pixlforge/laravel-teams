@@ -8,6 +8,8 @@
       </h2>
     </header>
 
+    @include('teams.subscriptions.partials._usage')
+
     <div class="table__wrapper">
       <table class="table__container">
         <thead class="table__head">

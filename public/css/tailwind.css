@@ -954,6 +954,11 @@ button {
   margin-top: 1.5rem;
 }
 
+.subscriptions__used-slots {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .table__wrapper {
   border-width: 2px;
   border-color: #edf2f7;
