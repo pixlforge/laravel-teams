@@ -17,7 +17,17 @@ class Team extends LaratrustTeam
      */
     protected $fillable = [
         'name',
-    ];
+    ];    
+
+    /**
+     * Checks if the team can downgrade its subscription to a specific plan.
+     *
+     * @return boolean
+     */
+    public function canDowngrade(Plan $plan)
+    {
+        return $this->users->count() <= $plan->teams_limit;
+    }
 
     /**
      * Checks whether or not the team is owned by the user.

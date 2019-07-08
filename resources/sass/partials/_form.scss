@@ -61,6 +61,14 @@
 
   &__radio {
     @apply mr-2;
+
+    &:disabled {
+      @apply cursor-not-allowed;
+
+      & + .form__label {
+        @apply text-gray-500 cursor-not-allowed;
+      }
+    }
   }
 
   &__validation {

@@ -38,4 +38,7 @@ Route::namespace('Teams')->group(function () {
             'index' => 'teams.subscriptions.index',
             'store' => 'teams.subscriptions.store',
         ]);
+    
+    Route::post('/teams/{team}/subscriptions/swap', 'TeamSwapSubscriptionController@store')
+        ->name('teams.subscriptions.swap.store');
 });

@@ -852,6 +852,15 @@ button {
   margin-right: 0.5rem;
 }
 
+.form__radio:disabled {
+  cursor: not-allowed;
+}
+
+.form__radio:disabled + .form__label {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
 .form__validation {
   display: inline-block;
   font-size: 0.75rem;
