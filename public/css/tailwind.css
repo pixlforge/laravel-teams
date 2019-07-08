@@ -686,6 +686,10 @@ button {
   color: #f56565;
 }
 
+.button__blank--blue:hover {
+  color: #4299e1;
+}
+
 .button--pink {
   color: #fff;
   background-color: #ed64a6;
@@ -813,6 +817,31 @@ button {
 }
 
 .form__input--invalid {
+  border-color: #f56565;
+}
+
+.form__select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 1.5rem;
+  line-height: 1.625;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: #fed7e2;
+  outline: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.form__select:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.form__select--invalid {
   border-color: #f56565;
 }
 

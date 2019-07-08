@@ -33,12 +33,27 @@
               </td>
               <td class="table__cell">{{ $user->pivot->created_at->diffForHumans() }}</td>
               <td class="table__cell">
-                @permission('delete users')
+
+                {{-- Delete user --}}
+                @permission('delete users', $team->id)
                   @unless ($user->isOnlyAdminInTeam($team))
                     <a
                       href="{{ route('teams.users.remove', [$team, $user]) }}"
-                      class="button__blank button__blank--red">
+                      class="button__blank button__blank--red"
+                      title="Remove user from team">
                       &times;
+                    </a>
+                  @endunless
+                @endpermission
+
+                {{-- Change user role --}}
+                @permission('change user roles', $team->id)
+                  @unless ($user->isOnlyAdminInTeam($team))
+                    <a
+                      href="{{ route('teams.users.roles.edit', [$team, $user]) }}"
+                      class="button__blank button__blank--blue"
+                      title="Change user's role">
+                      &plusmn;
                     </a>
                   @endunless
                 @endpermission

@@ -43,6 +43,18 @@
     }
   }
 
+  &__select {
+    @apply w-full appearance-none text-2xl leading-relaxed rounded-lg border-2 border-pink-200 outline-none px-4 py-1;
+
+    &:focus {
+      @apply shadow-outline;
+    }
+
+    &--invalid {
+      @apply border-red-500;
+    }
+  }
+
   &__checkbox {
     @apply;
   }

@@ -23,6 +23,12 @@ button {
         @apply text-red-500;
       }
     }
+
+    &--blue {
+      &:hover {
+        @apply text-blue-500;
+      }
+    }
   }
 
   &--pink {
