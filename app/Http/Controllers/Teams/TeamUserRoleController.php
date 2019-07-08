@@ -5,11 +5,22 @@ namespace App\Http\Controllers\Teams;
 use App\Models\User;
 use App\Models\Team;
 use App\Teams\Roles;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TeamUserRoleController extends Controller
 {
+    /**
+     * TeamUserRoleController constructor.
+     *
+     * @param Request $request
+     */
+    public function __construct(Request $request)
+    {
+        $this->middleware(['permission:change user roles,' . $request->team])
+            ->only(['edit', 'update']);
+    }
+
     /**
      * Show the edit user role page.
      *

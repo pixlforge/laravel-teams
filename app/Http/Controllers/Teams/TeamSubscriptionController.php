@@ -10,6 +10,16 @@ use App\Http\Controllers\Controller;
 class TeamSubscriptionController extends Controller
 {
     /**
+     * TeamSubscriptionController constructor.
+     *
+     * @param Request $request
+     */
+    public function __construct(Request $request)
+    {
+        $this->middleware(['permission:manage team subscription,' . $request->team]);
+    }
+    
+    /**
      * Undocumented function
      *
      * @param Team $team
