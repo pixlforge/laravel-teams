@@ -42,6 +42,17 @@ class Team extends LaratrustTeam
     }
 
     /**
+     * Checks if user is part of the team.
+     *
+     * @param User $user
+     * @return boolean
+     */
+    public function hasUser(User $user)
+    {
+        abort_if(!$this->users->contains($user), 403, "User does not belong to this team.");
+    }
+
+    /**
      * Checks if the maximum number of available users
      * has been reached for the team's current plan.
      *

@@ -32,7 +32,17 @@
                 @endif
               </td>
               <td class="table__cell">{{ $user->pivot->created_at->diffForHumans() }}</td>
-              <td class="table__cell">Menu</td>
+              <td class="table__cell">
+                @permission('delete users')
+                  @unless ($user->isOnlyAdminInTeam($team))
+                    <a
+                      href="{{ route('teams.users.remove', [$team, $user]) }}"
+                      class="button__blank button__blank--red">
+                      &times;
+                    </a>
+                  @endunless
+                @endpermission
+              </td>
             </tr>
           @endforeach
         </tbody>

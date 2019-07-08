@@ -668,6 +668,24 @@ button {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
+.button__blank {
+  font-size: 1.5rem;
+  color: #cbd5e0;
+  font-weight: 900;
+  text-transform: uppercase;
+  outline: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.button__blank:hover {
+  color: #718096;
+}
+
+.button__blank--red:hover {
+  color: #f56565;
+}
+
 .button--pink {
   color: #fff;
   background-color: #ed64a6;

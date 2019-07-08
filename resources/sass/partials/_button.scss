@@ -11,6 +11,20 @@ button {
     }
   }
 
+  &__blank {
+    @apply text-2xl text-gray-400 font-black uppercase outline-none px-2;
+
+    &:hover {
+      @apply text-gray-600;
+    }
+
+    &--red {
+      &:hover {
+        @apply text-red-500;
+      }
+    }
+  }
+
   &--pink {
     @apply text-white bg-pink-500;
 

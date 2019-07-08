@@ -37,7 +37,7 @@
       {{-- Delete the team --}}
       <li class="side-nav__list-item">
         <a
-          href="{{ route('teams.delete.confirmation', $team) }}"
+          href="{{ route('teams.delete', $team) }}"
           class="side-nav__link side-nav__link--grey">
           Delete team
         </a>

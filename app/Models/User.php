@@ -40,7 +40,19 @@ class User extends Authenticatable
     ];
 
     /**
-     * Undocumented function
+     * Checks if the user is the only admin on the team.
+     *
+     * @param Team $team
+     * @return boolean
+     */
+    public function isOnlyAdminInTeam(Team $team)
+    {
+        return $this->hasRole('team_admin', $team->id) &&
+               $team->users()->whereRoleIs('team_admin', $team->id)->count() === 1;
+    }
+
+    /**
+     * Teams relationship.
      *
      * @return void
      */

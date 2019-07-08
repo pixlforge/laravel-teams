@@ -20,7 +20,7 @@ class TeamController extends Controller
             ->except(['index', 'store']);
         
         $this->middleware(['permission:delete team,' . $request->team])
-            ->only(['delete']);
+            ->only(['delete', 'destroy']);
     }
     
     /**
@@ -64,6 +64,17 @@ class TeamController extends Controller
         $user->attachRole(Roles::$roleWhenCreatingTeam, $team->id);
 
         return redirect(route('teams.index'));
+    }
+
+    /**
+     * Show the team delete confirmation view.
+     *
+     * @param Team $team
+     * @return void
+     */
+    public function delete(Team $team)
+    {
+        return view('teams.delete', compact('team'));
     }
 
     /**
